@@ -16,14 +16,14 @@
   html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
   iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; padding-top: env(safe-area-inset-top); box-sizing: border-box; background: #000; }
   #carga { position: fixed; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; background: #000; color: #e6e6e6; font: 16px system-ui, sans-serif; transition: opacity .4s; text-align: center; padding: 20px; }
-  #carga img { width: 110px; height: 110px; border-radius: 50%; }
-  #carga i { width: 34px; height: 34px; border: 4px solid rgba(255,255,255,.2); border-top-color: #FF7617; border-radius: 50%; animation: g 1s linear infinite; }
+  .anillo { position: relative; width: 120px; height: 120px; } .anillo img { position: absolute; inset: 6px; width: 108px; height: 108px; border-radius: 50%; }
+  #carga i { position: absolute; inset: 0; box-sizing: border-box; width: 120px; height: 120px; border: 4px solid rgba(255,255,255,.2); border-top-color: #FF7617; border-radius: 50%; animation: g 1s linear infinite; }
   #carga a { color: #FF7617; }
   @keyframes g { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
-<div id="carga"><img src="../logo-carga.jpg" alt=""><i></i><span>Cargando…</span></div>
+<div id="carga"><div class="anillo"><img src="../logo-carga.jpg" alt=""><i></i></div><span>Cargando…</span></div>
 <iframe title="Panel Pulso" allow="geolocation *; camera *; microphone *; clipboard-write *; fullscreen *"
   onload="if(!this.src)return;var c=document.getElementById('carga');if(c){c.style.opacity=0;setTimeout(function(){c.remove()},450)}"></iframe>
 <script>(function(){
