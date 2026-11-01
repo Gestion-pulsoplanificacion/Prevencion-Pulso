@@ -1,2 +1,1 @@
-// ⚠ Pega aquí el enlace de la aplicación web de Apps Script (termina en /exec)
-var URL_SCRIPT = 'PEGA_AQUI_EL_ENLACE_EXEC';
+var URL_SCRIPT = 'https://script.google.com/macros/s/AKfycby5wuKN-9p3QolyEMw_MgyjRtsmebEZtAmJc-Ul8x7weZwijV4svn-a5PlK3RehWMRo/exec';
